@@ -1,5 +1,4 @@
 import React from 'react'
-import './Dashbord.css';
 import Dashbord from './Dashbord'
 
 const App = () => {
