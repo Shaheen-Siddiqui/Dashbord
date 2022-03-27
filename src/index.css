@@ -1,6 +1,7 @@
 body{
   font-family:sans-serif;
   z-index:1;
+background:#f1f5f9;
 }
 
 :root{
@@ -53,12 +54,14 @@ margin-top: 1rem;
   font-size: 1.5rem;
   padding-right: 1rem;
 }
-#nav-toggle:checked+.sidebar {
-width: 70%;
+#nav-toggle:checked + .sidebar {
+width: 100%;
 background-color: pink;
 }
 
-
+.nav-toggle{
+  display: none;
+}
 
 .sidebar-menu a.active{
   background-color: #fff;
@@ -76,18 +79,15 @@ header{
   padding:1rem 1.5rem;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
   position: fixed;
-  /* height:9rem; */
-  width: 59.3rem; /* Extra ********/
+  width: 61.3rem; /* Extra ********/
   left: 345px;
   width: calc(100% -345px);
   top:0;
   z-index: 100;
+  background-color:#fff;
 } 
-.bag-change{
+.bg-change-input{
   background-color: transparent !important;
-}
-#nav-toggle{
-
 }
 
 header h2{
@@ -99,7 +99,7 @@ header label span{
 }
 
 .search-wrapper{
-  border-top: 1px solid #ccc;
+  border: 1px solid #ccc;
   border-radius: 30px;
   height:50px;
   display: flex;
@@ -126,6 +126,8 @@ outline: none;
 .user-wrapper{
   display:flex;
   align-items: center;
+  position:relative;
+  left: -3rem;
 }
 .user-wrapper img{
   border-radius:50%;
@@ -136,7 +138,7 @@ outline: none;
   color: var(--text-grey)
 }
 main{
-margin-top:130px; /*Extra *******/
+margin-top:120px; /*Extra *******/
 padding:2rem 1.5rem;
 background:#f1f5f9;
 min-height: calc(100vh - 1000px);
@@ -172,7 +174,7 @@ color: var(--main-color);
   color: #fff;
 }
 
-  .card-signal div:last-child h1,
+.card-signal div:last-child h1,
 .card-signal:last-child div:first-child span,
 .card-signal:last-child div:last-child span{
   color: #fff;
@@ -191,8 +193,9 @@ margin-left: 1.5rem;
 }
 
 .card{
-  background-color:aquamarine;
+  background-color:white;
   border-radius: 5px;
+  box-shadow: 1px 2px 2px 1px rgba(0,0,0,0.2);
 }
 
 .OuterForAll{
@@ -287,8 +290,124 @@ align-items: center;
   color: var(--main-color);
 }
 
+/************************  Media Queryes  ******************************/
+@media (min-width:1440px) {
+  header{
+    width: 76%;
+  }
+}
+ @media (min-width:1024px) {
 
+  /* header{
+    width: 73%;
+  }
+  .card{
+    box-shadow: none;
+    box-shadow: 0 0 4px 0 grey;
+width: 40rem;
+      }
+  .OuterForAll{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .leftsideCard{
+    min-width: 39rem;
+    margin-top: 1rem;
+    
+  } */
+ 
+} 
+@media (max-width:768px) {
+  header{
+    width: 32.8em;
+  }
+  .search-wrapper{
+    display: none;
+  }
+  .cards{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .card-signal{
+    width: 10em;
+  }
+  
+  .card{
+    box-shadow: none;
+    box-shadow: 0 0 4px 0 grey;
+width: 96%;
+      }
+  .OuterForAll{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -62rem;
+  }
+  .leftsideCard{
+    margin-top: 2rem;
+    
+  }
+  .recent-grid{
+    width: 90%;
+  }
+ main{
+   height:80rem;
+ }
+ header{
+   width:26.9rem;
+ }
+}
+@media (max-width:425px) {
 
+.sidebar{
+  display:none !important;
+  position: relative;
+}
+main{
+  width: 100%;
+}
+header{
+  margin-left: -22rem;}
+.main-contant{
+  margin:0;}
+}
 
+@media (max-width:375px) {
 
+  .cards{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .card-signal{
+    width: 24rem;
+  }
+  
+  .card{
+    box-shadow: none;
+  width: 96%;
+  box-shadow: 0 0 4px 0 grey;
 
+      }
+      .OuterForAll{
+        margin-top: -44rem;
+      }
+.Right-sideCard{
+margin-left: 0.7rem;
+}
+header{
+  height:5rem;
+  width:25rem;
+  box-shadow: 0 0 4px 0 grey;
+}
+.user-wrapper{
+  display:flex;
+  margin-left: 3rem;
+  font-size: 3;}
+  main{
+    margin-top: 4rem;
+  }
+}
+@media (max-width:320px) {
+  .Right-sideCard{ 
+    border: 1px solid lawngreen;
+  }
+}

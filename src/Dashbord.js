@@ -2,7 +2,6 @@ import React from 'react'
 const Dashbord = () => {
   return (
     <div>
-    <input type="checkbox" id="nav-toggle"/>
 
       <div className="sidebar">
           <div className="sidebar-brand">
@@ -50,7 +49,7 @@ const Dashbord = () => {
         </h2>
         <div className="search-wrapper">
             <span className="las la-search"></span>
-            <input className="bag-change" type="text" placeholder="Search here" />
+            <input className="bg-change-input" type="text" placeholder="Search here" />
         </div>
         <div className="user-wrapper">
             <img className="costomeImage" src="https://images.pexels.com/photos/733853/pexels-photo-733853.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
@@ -107,7 +106,7 @@ const Dashbord = () => {
 <div className="OuterForAll">
 <div className="recent-grid">
     <div className="projects">
-        <div className="card">
+        <div className="card Right-sideCard">
             <div className="card-header">
                 <h2>Recent Projects</h2>
                 <button>see all <span className="las la-arrow-right"></span> </button>
@@ -183,7 +182,7 @@ const Dashbord = () => {
 </div>
 
 <div className="costomers AnotherDown">
-<div className="card">
+<div className="card leftsideCard">
             <div className="card-header">
                 <h3>News Customer</h3>
                 <button>see all <span className="las la-arrow-right"></span> </button>
