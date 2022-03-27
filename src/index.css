@@ -291,35 +291,25 @@ align-items: center;
 }
 
 /************************  Media Queryes  ******************************/
-@media (min-width:1440px) {
+@media (max-width:1440px) {
   header{
     width: 76%;
   }
+.user-wrapper{
+  border: none;
+  margin-left: 5rem;}
 }
- @media (min-width:1024px) {
+ @media (max-width:1024px) {
+  header{
+    width: 73%;} 
+}
 
-  /* header{
-    width: 73%;
-  }
-  .card{
-    box-shadow: none;
-    box-shadow: 0 0 4px 0 grey;
-width: 40rem;
-      }
-  .OuterForAll{
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .leftsideCard{
-    min-width: 39rem;
-    margin-top: 1rem;
-    
-  } */
- 
-} 
 @media (max-width:768px) {
   header{
     width: 32.8em;
+  }
+  .user-wrapper{
+  margin-right: -2.5rem;
   }
   .search-wrapper{
     display: none;
@@ -409,5 +399,14 @@ header{
 @media (max-width:320px) {
   .Right-sideCard{ 
     border: 1px solid lawngreen;
+    max-width: 20rem;
   }
+  .contact{
+    display: flex;
+  }
+.header{
+  font-size: .8rem;}
+.user-wrapper{
+  margin-right: -0.0rem;
+}
 }

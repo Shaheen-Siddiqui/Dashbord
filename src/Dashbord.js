@@ -70,8 +70,7 @@ const Dashbord = () => {
                 <span className="las la-users"></span>
             </div>
         </div>
-
-        <div className="card-signal">
+     <div className="card-signal">
             <div>
                 <h1>79</h1>
                 <span>Projects</span>
