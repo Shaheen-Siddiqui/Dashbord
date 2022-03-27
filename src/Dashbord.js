@@ -2,6 +2,8 @@ import React from 'react'
 const Dashbord = () => {
   return (
     <div>
+    <input type="checkbox" id="nav-toggle"/>
+
       <div className="sidebar">
           <div className="sidebar-brand">
               <h2><span className="lab la-accusoft"></span> Accusoft</h2>
@@ -41,14 +43,14 @@ const Dashbord = () => {
 <div className="main-contant">
     <header className="header">
         <h2>
-        <lable for="">
+        <lable for="nav-toggle">
             <span className="las la-bars"></span>
         </lable>
             Dashbord
         </h2>
         <div className="search-wrapper">
             <span className="las la-search"></span>
-            <input type="text" placeholder="Search here" />
+            <input className="bag-change" type="text" placeholder="Search here" />
         </div>
         <div className="user-wrapper">
             <img className="costomeImage" src="https://images.pexels.com/photos/733853/pexels-photo-733853.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
@@ -170,12 +172,6 @@ const Dashbord = () => {
                              <td><span className="status pink"></span>Progress</td>
                              
                          </tr>
-                         <tr>
-                             <td>Unshop app</td>
-                             <td>Mobile team</td>
-                             <td><span className="status orange"></span>Pending</td>
-                         </tr>
-                            
 
                      </tbody>
                 </table>
@@ -208,55 +204,49 @@ const Dashbord = () => {
                <span className="las la-phone"></span>
             </div>
            </div>
+           {/*  */}
            <div className="costomers">
-               <div>
+               <div className="info">
                    <img className="costomeImage" src="https://images.pexels.com/photos/733853/pexels-photo-733853.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
                    <div>
                        <h4>Lewis S. chunnigum </h4>
                        <small>CEO Excerpt </small>
                    </div>
                </div>
+            <div className="contact">
                <span className="las la-user-circle"></span>
                <span className="las la-comment"></span>
                <span className="las la-phone"></span>
-           </div>
-           <div className="costomers">
-               <div>
-                   <img className="costomeImage" src="https://images.pexels.com/photos/733853/pexels-photo-733853.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
-                   <div>
-                       <h4>Lewis S. chunnigum </h4>
-                       <small>CEO Excerpt </small>
-                   </div>
-               </div>
-               <span className="las la-user-circle"></span>
-               <span className="las la-comment"></span>
-               <span className="las la-phone"></span>
-           </div>
-           <div className="costomers">
-               <div>
-                   <img className="costomeImage" src="https://images.pexels.com/photos/733853/pexels-photo-733853.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
-                   <div>
-                       <h4>Lewis S. chunnigum </h4>
-                       <small>CEO Excerpt </small>
-                   </div>
-               </div>
-               <span className="las la-user-circle"></span>
-               <span className="las la-comment"></span>
-               <span className="las la-phone"></span>
-           </div>
-           <div className="costomers">
-               <div>
-                   <img className="costomeImage" src="https://images.pexels.com/photos/733853/pexels-photo-733853.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
-                   <div>
-                       <h4>Lewis S. chunnigum </h4>
-                       <small>CEO Excerpt </small>
-                   </div>
-               </div>
-               <span className="las la-user-circle"></span>
-               <span className="las la-comment"></span>
-               <span className="las la-phone"></span>
-           </div>
             </div>
+           </div><div className="costomers">
+               <div className="info">
+                   <img className="costomeImage" src="https://images.pexels.com/photos/733853/pexels-photo-733853.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
+                   <div>
+                       <h4>Lewis S. chunnigum </h4>
+                       <small>CEO Excerpt </small>
+                   </div>
+               </div>
+            <div className="contact">
+               <span className="las la-user-circle"></span>
+               <span className="las la-comment"></span>
+               <span className="las la-phone"></span>
+            </div>
+           </div><div className="costomers">
+               <div className="info">
+                   <img className="costomeImage" src="https://images.pexels.com/photos/733853/pexels-photo-733853.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
+                   <div>
+                       <h4>Lewis S. chunnigum </h4>
+                       <small>CEO Excerpt </small>
+                   </div>
+               </div>
+            <div className="contact">
+               <span className="las la-user-circle"></span>
+               <span className="las la-comment"></span>
+               <span className="las la-phone"></span>
+            </div>
+           </div>
+           
+</div>
 </div>
 </div>
 </div>

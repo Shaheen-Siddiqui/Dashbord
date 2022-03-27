@@ -53,6 +53,13 @@ margin-top: 1rem;
   font-size: 1.5rem;
   padding-right: 1rem;
 }
+#nav-toggle:checked+.sidebar {
+width: 70%;
+background-color: pink;
+}
+
+
+
 .sidebar-menu a.active{
   background-color: #fff;
   padding-top: 1rem;
@@ -76,6 +83,13 @@ header{
   top:0;
   z-index: 100;
 } 
+.bag-change{
+  background-color: transparent !important;
+}
+#nav-toggle{
+
+}
+
 header h2{
   color:#222;
 }
@@ -168,10 +182,12 @@ table{
 }
 
 .recent-grid{
-  width: 65%;
+  width: 67%;
+  margin-left: 1rem;
 }
 .AnotherDown{
-width:19rem;
+width:23rem;
+margin-left: 1.5rem;
 }
 
 .card{
@@ -248,6 +264,7 @@ align-items: center;
 .info{
   display: flex;
   align-items: center;
+  margin-top: 1rem;
 }
 
 .info img{ 
@@ -263,7 +280,12 @@ align-items: center;
   font-weight: 600;
   color:var(--text-grey)
 } 
-
+.contact span{ 
+  font-size: 1.2rem;
+  display: inline-block;
+  margin-left: 0.5rem;
+  color: var(--main-color);
+}
 
 
 
