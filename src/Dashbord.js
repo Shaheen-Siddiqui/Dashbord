@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import {CustomerArr} from './CustomerArr';
 import {RecentProjectArr} from './CustomerArr';
 import {CardArr} from './CustomerArr';
-
+import {SidebaarArr} from './CustomerArr';
 
 const Dashbord = () => {
 
@@ -39,7 +39,6 @@ if (toggle==false) {
 
   return (
     <div>
-    {/* <input type="checkbox" id="nav-toggle" />    */}
  {toggle?
       (<div className="sidebar">
           <div className="sidebar-brand">
@@ -48,37 +47,26 @@ if (toggle==false) {
           <div className="sidebar-menu">
               <ul>
                     <li><a className="active" href=""><span className="las la-igloo"></span>
-                    <span>Dashbord</span>
-
-                    </a>
+                    <span>Dashbord</span></a>
                     </li>
+{/* UsedHigherOrder Function on "Dynamic Navbaar" Component */}
 
-                    <li><a href=""><span className="las la-user"></span>
-                    <span>Customers</span></a>
-                    </li>
+                    {
+                        SidebaarArr.map(({Icon,vocabulary})=>{
+                            return(<>
 
-                    <li><a href=""><span className="las la-clipboard-list"></span>
-                    <span>Projects</span></a>
+                    <li><a href=""><span className={Icon}></span>
+                    <span>{vocabulary}</span></a>
                     </li>
-
-                    <li><a href=""><span className="las la-shopping-bag"></span>
-                    <span>Orders</span></a>
-                    </li>
-
-                    <li><a href=""><span className="las la-receipt"></span>
-                    <span>Inventory</span></a>
-                    </li>
-
-                    <li><a href=""><span className="las la-user-circle"></span>
-                    <span>Accounts</span></a>
-                    </li>
-
-                    <li><a href=""><span className="las la-clipboard-list"></span>
-                    <span>Tasks</span></a>
-                    </li>
+                            </>)
+                        })
+                    }
               </ul>
           </div>
       </div>):null}
+
+
+
 <div className="main-contant" style={maincontant}>
     <header className="header" style={header}>
         <h2>

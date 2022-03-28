@@ -94,4 +94,39 @@ export const CardArr = [
         todoThings:"Income",
         Class:'lab la-google-wallet'
     },
+];
+
+export const SidebaarArr=[
+    {Icon:"las la-user",
+    vocabulary:'Customers'
+    },
+    {Icon:'las la-clipboard-list',
+    vocabulary:'Projects'
+    },
+    {Icon:'las la-shopping-bag',
+    vocabulary:'Orders'
+    },
+    {Icon:'las la-receipt',
+    vocabulary:'Inventory'
+    },
+    {Icon:'las la-user-circle',
+    vocabulary:'Accounts'
+    },
+    {Icon:'las la-clipboard-list',
+    vocabulary:'Tasks'
+    },
 ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
