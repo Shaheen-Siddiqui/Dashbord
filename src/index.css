@@ -127,9 +127,7 @@ outline: none;
   align-items: center;
   position:relative;
   left: -3rem;
-  color: var(--text-grey)
-
-}
+  color: var(--text-grey)}
 
 .user-wrapper img{
   border-radius:50%;

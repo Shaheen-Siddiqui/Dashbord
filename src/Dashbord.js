@@ -1,9 +1,19 @@
-import React from 'react'
+
+import React,{useState} from 'react';
+import CustomerArr from './CustomerArr';
+import RecentProjectArr from './RecentProjectArr';
+import CardArr from './CardArr';
+
 const Dashbord = () => {
+    let[toggle,setToggle]=useState(true);
+    const toggleHandler =()=>{
+        setToggle(!toggle)
+    }
+
   return (
     <div>
-
-      <div className="sidebar">
+ {toggle?
+      (<div className="sidebar">
           <div className="sidebar-brand">
               <h2><span className="lab la-accusoft"></span> Accusoft</h2>
           </div>
@@ -38,12 +48,12 @@ const Dashbord = () => {
                     </li>
               </ul>
           </div>
-      </div>
+      </div>):null}
 <div className="main-contant">
     <header className="header">
         <h2>
         <lable for="nav-toggle">
-            <span className="las la-bars"></span>
+            <span className="las la-bars" onClick={toggleHandler} ></span>
         </lable>
             Dashbord
         </h2>
@@ -56,49 +66,30 @@ const Dashbord = () => {
             <div>
                 <h4>Rokezrs Doe </h4>
                 <span>Super admin</span>
+
             </div>
         </div>
     </header>
 <main>
+{/* UsedHigherOrder Function on "Card Body" Component */}
+
     <div className="cards">
+    {
+        CardArr.map(({number,todoThings,Class})=>{
+            return(<>
         <div className="card-signal">
             <div>
-                <h1>54</h1>
-                <span>Customers</span>
+                <h1>{number}</h1>
+                <span>{todoThings}</span>
             </div>
             <div>
-                <span className="las la-users"></span>
+                <span className={Class}></span>
             </div>
         </div>
-     <div className="card-signal">
-            <div>
-                <h1>79</h1>
-                <span>Projects</span>
-            </div>
-            <div>
-                <span className="las la-clipboard-list "></span>
-            </div>
-        </div>
-
-        <div className="card-signal">
-            <div>
-                <h1>124</h1>
-                <span>orders</span>
-            </div>
-            <div>
-                <span className="las la-shopping-bag"></span>
-            </div>
-        </div>
-
-        <div className="card-signal">
-            <div>
-                <h1 className="specialH1">$6k</h1>
-                <span>Income</span>
-            </div>
-            <div>
-                <span className="lab la-google-wallet"></span>
-            </div>
-        </div>
+            </>)
+        })
+    }
+        
     </div>
 </main>
 
@@ -122,55 +113,33 @@ const Dashbord = () => {
 
                          </tr>
                      </thead>
-                     <tbody>
-                         <tr>
-                             <td>UI/UX Design</td>
-                             <td>UI Team</td>
-                             <td><span className="status purple"></span>rewieve</td>
-                             
-                         </tr>
-                         <tr>
-                             <td>Web Devlopmemt</td>
-                             <td>Frontend</td>
-                             <td><span className="status pink"></span>Progress</td>
-                             
-                         </tr>
-                         <tr>
-                             <td>Unshop app</td>
-                             <td>Mobile team</td>
-                             <td><span className="status orange"></span>Pending</td>
-                         </tr>
-{/*  */}
-<tr>
-                             <td>UI/UX Design</td>
-                             <td>UI Team</td>
-                             <td><span className="status purple"></span> rewieve</td>
-                             
-                         </tr>
-                         <tr>
-                             <td>Web Devlopmemt</td>
-                             <td>Frontend</td>
-                             <td><span className="status pink"></span>Progress</td>
-                             
-                         </tr>
-                         <tr>
-                             <td>Unshop app</td>
-                             <td>Mobile team</td>
-                             <td><span className="status orange"></span>Pending</td>
-                         </tr>
-                         <tr>
-                             <td>UI/UX Design</td>
-                             <td>UI Team</td>
-                             <td><span className="status purple"></span>rewieve</td>
-                             
-                         </tr>
-                         <tr>
-                             <td>Web Devlopmemt</td>
-                             <td>Frontend</td>
-                             <td><span className="status pink"></span>Progress</td>
-                             
-                         </tr>
+{/* UsedHigherOrder Function on "Recent Projects" Component */}
 
+                     <tbody>
+                    {
+                        RecentProjectArr.map(({UIUXDesign,UITeam,rewieve,WebDevlopmemt,Frontend,Progress,Unshopapp,Mobileteam,Pending})=>{
+                            return(<>
+                                <tr>
+                             <td>{UIUXDesign}</td>
+                             <td>{UITeam}</td>
+                             <td><span className="status purple"></span>{rewieve}</td>
+                             
+                         </tr>
+                         <tr>
+                             <td>{WebDevlopmemt}</td>
+                             <td>{Frontend}</td>
+                             <td><span className="status pink"></span>{Progress}</td>
+                             
+                         </tr>
+                         <tr>
+                             <td>{Unshopapp}</td>
+                             <td>{Mobileteam}</td>
+                             <td><span className="status orange"></span>{Pending}</td>
+                         </tr>
+                            </>)
+                        })
+                    }
+                         
                      </tbody>
                 </table>
                 </div>
@@ -186,64 +155,28 @@ const Dashbord = () => {
                 <h3>News Customer</h3>
                 <button>see all <span className="las la-arrow-right"></span> </button>
             </div>
+{/* UsedHigherOrder Function on "News Customer" Component */}
+         <div className="card-body">
+         {
+            CustomerArr.map(({img,pname,Eligibility})=>{
+            return(
+                <div className="costomers">
+               <div className="info">
+                   <img className="costomeImage" src={img} alt="" />
+                   <div>
+                       <h4>{pname}</h4>
+                       <small>{Eligibility}</small>
+                   </div>
+               </div>
+            <div className="contact">
+               <span className="las la-user-circle"></span>
+               <span className="las la-comment"></span>
+               <span className="las la-phone"></span>
+            </div>
+           </div>)
 
-            <div className="card-body">
-           <div className="costomers">
-               <div className="info">
-                   <img className="costomeImage" src="https://images.pexels.com/photos/733853/pexels-photo-733853.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
-                   <div>
-                       <h4>Lewis S. chunnigum </h4>
-                       <small>CEO Excerpt </small>
-                   </div>
-               </div>
-            <div className="contact">
-               <span className="las la-user-circle"></span>
-               <span className="las la-comment"></span>
-               <span className="las la-phone"></span>
-            </div>
-           </div>
-           {/*  */}
-           <div className="costomers">
-               <div className="info">
-                   <img className="costomeImage" src="https://images.pexels.com/photos/733853/pexels-photo-733853.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
-                   <div>
-                       <h4>Lewis S. chunnigum </h4>
-                       <small>CEO Excerpt </small>
-                   </div>
-               </div>
-            <div className="contact">
-               <span className="las la-user-circle"></span>
-               <span className="las la-comment"></span>
-               <span className="las la-phone"></span>
-            </div>
-           </div><div className="costomers">
-               <div className="info">
-                   <img className="costomeImage" src="https://images.pexels.com/photos/733853/pexels-photo-733853.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
-                   <div>
-                       <h4>Lewis S. chunnigum </h4>
-                       <small>CEO Excerpt </small>
-                   </div>
-               </div>
-            <div className="contact">
-               <span className="las la-user-circle"></span>
-               <span className="las la-comment"></span>
-               <span className="las la-phone"></span>
-            </div>
-           </div><div className="costomers">
-               <div className="info">
-                   <img className="costomeImage" src="https://images.pexels.com/photos/733853/pexels-photo-733853.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
-                   <div>
-                       <h4>Lewis S. chunnigum </h4>
-                       <small>CEO Excerpt </small>
-                   </div>
-               </div>
-            <div className="contact">
-               <span className="las la-user-circle"></span>
-               <span className="las la-comment"></span>
-               <span className="las la-phone"></span>
-            </div>
-           </div>
-           
+            })
+         }
 </div>
 </div>
 </div>
