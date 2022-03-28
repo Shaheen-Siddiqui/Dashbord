@@ -1,17 +1,45 @@
-
 import React,{useState} from 'react';
-import CustomerArr from './CustomerArr';
-import RecentProjectArr from './RecentProjectArr';
-import CardArr from './CardArr';
+import {CustomerArr} from './CustomerArr';
+import {RecentProjectArr} from './CustomerArr';
+import {CardArr} from './CustomerArr';
+
 
 const Dashbord = () => {
+
     let[toggle,setToggle]=useState(true);
     const toggleHandler =()=>{
         setToggle(!toggle)
+        console.log(toggle);
     }
+/////////////////////// internal stylings ///////////////////////
+let maincontant;
+let recentgrid;
+let header;
+let cardSignal;
+
+if (toggle==false) {
+    maincontant={
+        margin:'0',
+        marginTop:'-2.8rem'
+    }
+    header={
+        width:"80rem",
+        margin:"0rem",
+        position:"fixed",
+        left:"0"
+    }
+    recentgrid={
+        marginLeft: "2rem",
+        width: "74%"
+    }
+    cardSignal={
+        width: "100%",
+    }
+}
 
   return (
     <div>
+    {/* <input type="checkbox" id="nav-toggle" />    */}
  {toggle?
       (<div className="sidebar">
           <div className="sidebar-brand">
@@ -20,7 +48,9 @@ const Dashbord = () => {
           <div className="sidebar-menu">
               <ul>
                     <li><a className="active" href=""><span className="las la-igloo"></span>
-                    <span>Dashbord</span></a>
+                    <span>Dashbord</span>
+
+                    </a>
                     </li>
 
                     <li><a href=""><span className="las la-user"></span>
@@ -49,8 +79,8 @@ const Dashbord = () => {
               </ul>
           </div>
       </div>):null}
-<div className="main-contant">
-    <header className="header">
+<div className="main-contant" style={maincontant}>
+    <header className="header" style={header}>
         <h2>
         <lable for="nav-toggle">
             <span className="las la-bars" onClick={toggleHandler} ></span>
@@ -77,7 +107,7 @@ const Dashbord = () => {
     {
         CardArr.map(({number,todoThings,Class})=>{
             return(<>
-        <div className="card-signal">
+        <div className="card-signal" style={cardSignal}>
             <div>
                 <h1>{number}</h1>
                 <span>{todoThings}</span>
@@ -92,9 +122,8 @@ const Dashbord = () => {
         
     </div>
 </main>
-
-<div className="OuterForAll">
-<div className="recent-grid">
+<div className="OuterForAll Fortoggle">
+<div className="recent-grid" style={recentgrid}>
     <div className="projects">
         <div className="card Right-sideCard">
             <div className="card-header">
@@ -122,19 +151,19 @@ const Dashbord = () => {
                                 <tr>
                              <td>{UIUXDesign}</td>
                              <td>{UITeam}</td>
-                             <td><span className="status purple"></span>{rewieve}</td>
+                             <td><span className="status purple"> </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{rewieve}</td>
                              
                          </tr>
                          <tr>
                              <td>{WebDevlopmemt}</td>
                              <td>{Frontend}</td>
-                             <td><span className="status pink"></span>{Progress}</td>
+                             <td><span className="status pink"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Progress}</td>
                              
                          </tr>
                          <tr>
                              <td>{Unshopapp}</td>
                              <td>{Mobileteam}</td>
-                             <td><span className="status orange"></span>{Pending}</td>
+                             <td><span className="status orange"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Pending}</td>
                          </tr>
                             </>)
                         })

@@ -79,9 +79,9 @@ header{
   padding:1rem 1.5rem;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
   position: fixed;
-  width: 61.3rem; /* Extra ********/
+  width: 100rem;
   left: 345px;
-  width: calc(100% -345px);
+  /* width: calc(100% -345px); */
   top:0;
   z-index: 100;
   background-color:#fff;
@@ -117,7 +117,6 @@ padding: 0.5em;
 border:none;
 outline: none;
 }
-
 .costomeImage{
   height:3.5rem;
   width:3.5rem;
@@ -285,6 +284,20 @@ align-items: center;
   margin-left: 0.5rem;
   color: var(--main-color);
 }
+/* .main-contant{
+  margin: 0;
+  margin-top: -2.8rem;
+}
+.header{
+  width: 80rem;
+  margin:0rem;
+  position: fixed;
+  left: 0;}
+
+.recent-grid{
+  margin-left: 2rem;
+  width: 74%;
+} */
 
 /************************  Media Queryes  ******************************/
 @media (max-width:1440px) {
@@ -297,12 +310,16 @@ align-items: center;
 }
  @media (max-width:1024px) {
   header{
-    width: 73%;} 
+    display:flex;
+    max-width: 66rem;
+
+    /* min-width: 65rem; */
+  } 
 }
 
 @media (max-width:768px) {
   header{
-    width: 32.8em;
+    max-width:47rem
   }
   .user-wrapper{
   margin-right: -2.5rem;
@@ -317,16 +334,16 @@ align-items: center;
   .card-signal{
     width: 10em;
   }
-  
   .card{
     box-shadow: none;
     box-shadow: 0 0 4px 0 grey;
-width: 96%;
+    width: 96%;
       }
   .OuterForAll{
     display: flex;
     flex-wrap: wrap;
     margin-top: -62rem;
+    /* border: 1px solid #DD2F6E; */
   }
   .leftsideCard{
     margin-top: 2rem;
@@ -345,8 +362,8 @@ width: 96%;
 @media (max-width:425px) {
 
 .sidebar{
-  display:none !important;
   position: relative;
+  width:25rem;
 }
 main{
   width: 100%;
@@ -354,35 +371,35 @@ main{
 header{
   margin-left: -22rem;}
 .main-contant{
-  margin:0;}
+  margin:0;
+  margin-top: -7rem;
+}
 }
 
 @media (max-width:375px) {
-
   .cards{
     display: flex;
     flex-wrap: wrap;
-  }
+    margin-top: 2rem;}
+  .sidebar{width:22rem }
   .card-signal{
-    width: 24rem;
-  }
-  
+  width: 24rem;}
   .card{
-    box-shadow: none;
-  width: 96%;
-  box-shadow: 0 0 4px 0 grey;
+    width:10rem;
 
-      }
-      .OuterForAll{
-        margin-top: -44rem;
-      }
-.Right-sideCard{
-margin-left: 0.7rem;
+  box-shadow: none;
+  width: 96%;
+  box-shadow: 0 0 4px 0 grey;}
+  .OuterForAll{margin-top: -42rem;}
+.Right-sideCard{margin-left: 0.7rem;
 }
 header{
   height:5rem;
-  width:25rem;
+  width:23.8rem;
   box-shadow: 0 0 4px 0 grey;
+  position: fixed !important;
+  top:0;
+  
 }
 .user-wrapper{
   display:flex;
@@ -394,7 +411,7 @@ header{
 }
 @media (max-width:320px) {
   .Right-sideCard{ 
-    border: 1px solid lawngreen;
+    /* border: 1px solid lawngreen; */
     max-width: 20rem;
   }
   .contact{
